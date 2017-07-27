@@ -42,16 +42,26 @@ export class Feature {
 
     }
 
+
+    private static randomInt(min: number, max: number): number{
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
     /**
      *
      * @returns {string}
      */
     public getRandomColor() {
-        let letters = '0123456789ABCDEF';
+      /*  let letters = '0123456789ABCDEF';
         let color = '#';
         for (let i = 0; i < 6; i++ ) {
             color += letters[Math.floor(Math.random() * 16)];
         }
-        return color
+        return color*/
+
+        var h = Feature.randomInt(0, 360);
+        var s = Feature.randomInt(60, 98);
+        var l = Feature.randomInt(40, 90);
+        return `hsl(${h},${s}%,${l}%)`;
     }
 }
