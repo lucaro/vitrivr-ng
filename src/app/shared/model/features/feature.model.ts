@@ -26,6 +26,22 @@ export class Feature {
         return features.map(f => f.weight).reduce((a,b) => a+b);
     }
 
+    public static getDefaultWeight(name: string): number{
+      switch(name){
+
+        case "globalcolor": return 20;
+        case "localcolor": return 40;
+        case "quantized": return 30;
+        case "edge": return 80;
+        case "motion": return 10;
+        case "localfeatures": return 30;
+        case "localfeatures_fast": return 30;
+
+        default: return 100;
+      }
+
+    }
+
     /**
      *
      * @returns {string}

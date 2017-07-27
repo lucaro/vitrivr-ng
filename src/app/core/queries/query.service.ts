@@ -400,7 +400,7 @@ export class QueryService {
         for (let feature of this._features) {
             if (feature.name == category) return feature;
         }
-        let feature = new Feature(category, category, 100);
+        let feature = new Feature(category, category, Feature.getDefaultWeight(category));
         this._features.push(feature);
         this._subject.next("FEATURE");
         return feature;
