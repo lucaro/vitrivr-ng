@@ -57,6 +57,8 @@ export class QueryContainerComponent {
         this._configServiceSubscription = this._configService.observable.subscribe((config) => {
             this._config = config;
         })
+
+        this.onToggleButtonClicked('IMAGE');
     }
 
     /**
