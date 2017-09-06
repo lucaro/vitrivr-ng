@@ -22,8 +22,8 @@
                 <dd>{{mediaobject.objectId}}</dd>
                 <dt>Filename</dt>
                 <dd>{{mediaobject.name}}</dd>
-                <dt>Path</dt>
-                <dd><a href="{{_resolver.pathToObject(mediaobject)}}" download>{{mediaobject.path}}</a></dd>
+              <!--  <dt>Path</dt>
+                <dd><a href="{{_resolver.pathToObject(mediaobject)}}" download>{{mediaobject.path}}</a></dd> -->
                 <dt>Mediatype</dt>
                 <dd>{{mediaobject.mediatype}}</dd>
                 <dt style="margin-top: 16px" *ngIf="mediaobject.mediatype == 'IMAGE'">Tools</dt>
@@ -53,7 +53,7 @@
         <md-tab label="Metadata ({{metadata.length}})">
             <md-list>
                 <md-list-item *ngFor="let metadatum of metadata">
-                    <p md-line><strong>({{metadatum.domain}}) {{metadatum.key}}: </strong>{{metadatum.value}}</p>
+                    <p md-line><strong><!--({{metadatum.domain}}) -->{{metadatum.key}}: </strong>{{metadatum.value}}</p>
                 </md-list-item>
             </md-list>
         </md-tab>
