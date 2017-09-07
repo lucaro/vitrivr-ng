@@ -15,11 +15,11 @@
         </button>
 
         <span class="spacer-flex"></span>
-
+<!--
         <button md-icon-button (click)="onLoadImage()"  mdTooltip="Load image">
             <md-icon>file_upload</md-icon>
         </button>
-
+-->
         <button md-icon-button (click)="close()">
             <md-icon>save</md-icon>
         </button>
@@ -28,7 +28,7 @@
     <div style="display: flex; margin-top: 5px;">
         <sketch-canvas #sketch [width]="300" [height]="300"></sketch-canvas>
         <input #imageloader type="file" (change)="onFileAvailable($event)" hidden>
-        
+
         <span class="spacer-tiny"></span>
 
         <span [(colorPicker)]="color" (colorPickerChange)="onColorChange()" [cpToggle]="true" [cpDialogDisplay]="'inline'" [cpAlphaChannel]="'disabled'"></span>
